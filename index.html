@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Website Pribadi Saya</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #eeeeee;
+        }
+
+        .website {
+            width: 90%;
+            margin: 20px auto;
+            background-color: white;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 15px;
+        }
+
+        /* HEADER */
+
+        .header {
+            height: 150px;
+            text-align: center;
+            vertical-align: middle;
+            background-color: #d9ead3;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        /* MENU */
+
+        .menu {
+            text-align: center;
+            background-color: #eeeeee;
+            padding: 15px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            margin: 0 25px;
+            font-weight: bold;
+        }
+
+        /* SIDEBAR */
+
+        .sidebar {
+            width: 25%;
+            height: 350px;
+            vertical-align: top;
+            background-color: #f5f5f5;
+        }
+
+        /* KONTEN */
+
+        .content {
+            width: 75%;
+            vertical-align: top;
+            height: 350px;
+        }
+
+        /* TABEL BIODATA */
+
+        .biodata {
+            width: 80%;
+            border-collapse: collapse;
+        }
+
+        .biodata td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        /* FOOTER */
+
+        .footer {
+            text-align: center;
+            background-color: #eeeeee;
+            padding: 15px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="website">
+
+    <table>
+
+        <!-- HEADER -->
+
+        <tr>
+
+            <td colspan="2" class="header">
+
+                <h1>WEBSITE PRIBADI</h1>
+
+                <p>Muhammad Hamizan</p>
+
+            </td>
+
+        </tr>
+
+
+        <!-- MAIN MENU -->
+
+        <tr>
+
+            <td colspan="2" class="menu">
+
+                <a href="#home">HOME</a>
+
+                <a href="#profil">PROFIL</a>
+
+                <a href="#pendidikan">PENDIDIKAN</a>
+
+                <a href="#kontak">KONTAK</a>
+
+            </td>
+
+        </tr>
+
+
+        <!-- SIDEBAR DAN KONTEN -->
+
+        <tr>
+
+            <!-- SIDEBAR -->
+
+            <td class="sidebar">
+
+                <h2>SIDEBAR</h2>
+
+                <h3>Menu</h3>
+
+                <ul>
+
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#profil">Profil</a>
+                    </li>
+
+                    <li>
+                        <a href="#pendidikan">Pendidikan</a>
+                    </li>
+
+                    <li>
+                        <a href="#kontak">Kontak</a>
+                    </li>
+
+                </ul>
+
+
+                <h3>Website Link</h3>
+
+                <ul>
+
+                    <li>
+                        <a href="https://www.google.com">
+                            Google
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.usu.ac.id">
+                            Website USU
+                        </a>
+                    </li>
+
+                </ul>
+
+            </td>
+
+
+            <!-- ISI KONTEN -->
+
+            <td class="content">
+
+                <h1 id="home">Selamat Datang</h1>
+
+                <p>
+                    Selamat datang di website pribadi saya.
+                    Website ini dibuat untuk memenuhi tugas
+                    mata kuliah.
+                </p>
+
+
+                <h2 id="profil">Profil Saya</h2>
+
+                <p>
+                    Nama saya adalah <b>Muhammad Hamizan</b>.
+                    Saya merupakan mahasiswa Universitas
+                    Sumatera Utara.
+                </p>
+
+
+                <h2>Data Diri</h2>
+
+                <table class="biodata">
+
+                    <tr>
+
+                        <td><b>Nama</b></td>
+
+                        <td>Muhammad Hamizan</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><b>NIM</b></td>
+
+                        <td>261402112</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><b>Program Studi</b></td>
+
+                        <td>Teknologi Informasi</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><b>Universitas</b></td>
+
+                        <td>Universitas Sumatera Utara</td>
+
+                    </tr>
+
+                </table>
+
+
+                <h2 id="pendidikan">Pendidikan</h2>
+
+                <ol>
+
+                    <li>SD</li>
+
+                    <li>SMP</li>
+
+                    <li>SMA</li>
+
+                    <li>Universitas</li>
+
+                </ol>
+
+
+                <h2 id="kontak">Kontak</h2>
+
+                <p>
+
+                    Email:
+
+                    <a href="mailto:emailkamu@gmail.com">
+                        hamizanm980@gmail.com
+                    </a>
+
+                </p>
+
+            </td>
+
+        </tr>
+
+
+        <!-- FOOTER -->
+
+        <tr>
+
+            <td colspan="2" class="footer">
+
+                Copyright © 2026 Muhammad Hamizan
+
+            </td>
+
+        </tr>
+
+    </table>
+
+</div>
+
+</body>
+
+</html>
