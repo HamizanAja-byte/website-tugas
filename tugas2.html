@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran</title>
+    <link rel="stylesheet" href="form.css" />
+</head>
+<body>
+    <form name="formdaftar">
+            <legend>
+                <h1>Form Pendaftaran</h1>
+                <p>Silahkan lengkapi data diri anda dengan benar</p>
+            </legend>
+        
+
+    <div class="form-nama">
+        <div class="field pengguna">
+             <label for="pengguna">Username:</label>
+             <input type="text" placeholder="Masukkan Nama Lengkap" id="pengguna" name="pengguna" /><br>
+        </div>
+    </div>
+    
+    <div class="form-grid"> 
+        
+        <div class="field e-mail">
+             <label for="e-mail">E-mail:</label>
+             <input type="email" placeholder="Masukkan Email" id="e-mail" name="e-mail" /><br>
+        </div>
+
+        <div class="field password">
+            <label for="sandi">Password:</label>
+            <input type="password" placeholder="Masukkan Password" id="sandi" name="sandi" /><br>
+        </div>
+
+        <div class="field nomor telepon">
+            <label for="nomor telepon">No. Telepon:</label>
+            <input type="text" placeholder="Masukkan nomor telepon" id="nomor telepon" name="nomor telepon" /><br>
+        </div>
+
+        <div class="field gender">
+            <label>Jenis Kelamin:</label><br>
+            <input type="radio" id="laki" name="Jenis_Kelamin" value="Laki-laki">
+            <label for="laki">Laki-laki</label> 
+
+            <input type="radio" id="Perempuan" name="Jenis_Kelamin" value="Perempuan">
+            <label for="Perempuan">Perempuan</label>
+        </div>
+
+        <div class="field negara">
+            <label for="negara">Negara:</label>
+            <select id="negara" name="negara">
+                <option value="">Pilih negara</option>
+                <option value="Indonesia">Indonesia</option>
+                <option value="Jepang">Jepang</option>
+                <option value="Korea">Korea Selatan</option>
+                <option value="Turki">Turki</option>
+                <option value="Singapura">Singapura</option>
+                <option value="China">China</option>
+                <option value="Swiss">Swiss</option>
+                <option value="Thailand">Thailand</option>
+                <option value="Filiphina">Filipina</option>
+                <option value="Rusia">Rusia</option>
+            </select><br>
+        </div>
+
+        <div class="field tanggal">
+            <label for="tanggal lahir">Tanggal lahir:</label>
+            <input type="date" id="tanggal" name="tanggal">
+        </div>
+    
+        <div class="field alamat">
+            <label for="Alamat">Alamat:</label>
+            <textarea id="Alamat" name="Alamat" rows="5" placeholder="Masukkan Alamat"></textarea>
+        </div>
+
+        <div class="field hobi">
+            <label>Hobi:</label>
+
+            <div>
+                <input type="checkbox" name="hobi" value="Berenang"> Berenang
+            </div>
+
+            <div>
+                <input type="checkbox" name="hobi" value="Olahraga"> Olahraga
+            </div>
+
+            <div>
+                <input type="checkbox" name="hobi" value="Main game"> Main Game
+            </div>
+            
+            <div class="hobi-lainnya">
+                <label for="lainnya">
+                <input type="checkbox" id="lainnya" name="hobi" value="Lainnya"> Lainnya
+                </label>
+            
+                <input type="text" placeholder="Hobi lainnya" id="hobi-lainnya" name="hobi_lainnya"><br>
+            </div><br>
+        </div>
+    </div>
+        
+    <div class="form-grid2">
+        <div class="field submit">
+            <button type="button" name="btnRegister" onclick="daftar()" >
+             Daftar
+            </button>   
+            <input type="reset" value="Reset" />
+        </div>
+    </div>
+
+    <div class="sosmed">
+        <a href="https://www.instagram.com/hmzn_aja/" target="_blank">Instagram</a>
+        <a href="tugas3..html" target="_blank">Tugas3</a>
+        <a href="https://wa.me/6285183752399" target="_blank">Whatsapp</a> 
+    </div>
+    </form>
+
+    <script>
+        function daftar() {
+            let username = document.formdaftar.pengguna.value;
+            let email = document.formdaftar["e-mail"].value;
+            let password = document.formdaftar.sandi.value;
+            let nomorTelepon = document.formdaftar["nomor telepon"].value;
+            let jeniskelamin = document.querySelector('input[name="Jenis_Kelamin"]:checked')?.value || "-";
+            let negara = document.formdaftar.negara.value;
+            let tanggalLahir = document.getElementById("tanggal").value;
+            let alamat = document.formdaftar.Alamat.value;
+            let hobi = [...document.querySelectorAll(
+            'input[name="hobi"]:checked'
+            )].map(item => item.value);
+            let hobiLainnya = document.getElementById("hobi-lainnya").value;
+            if (hobi.includes("Lainnya") && hobiLainnya.trim() !== "") {
+            hobi.push(hobiLainnya);
+            }
+
+
+            document.write("Data Yang Anda Input<br>");
+            document.write("Username: " + username + "<br>");
+            document.write("E-mail: " + email + "<br>");
+            document.write("Password: " + password + "<br>");
+            document.write("No.Telepon: " + nomorTelepon + "<br>");
+            document.write("Jenis Kelamin: " + jeniskelamin + "<br>");
+            document.write("Negara: " + negara + "<br>");
+            document.write("Tanggal Lahir: " + tanggalLahir + "<br>");
+            document.write("Alamat: " + alamat + "<br>");
+            document.write("Hobi: " + hobi.join(",") + "<br>");
+            
+        }
+    </script>
+</body>
+</html>

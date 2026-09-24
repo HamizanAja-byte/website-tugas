@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas JavaScript</title>
+    
+    <style>
+        fieldset {
+            width: 700px;
+            margin: 50px auto;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 210px 1fr;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-size: 30px;
+        }
+
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 8px;
+            font-size: 25px;
+        }
+
+        .tombol {
+            grid-column: 2;
+            display: flex;
+            gap: 10px;
+            margin-bottom: 0px;
+        }
+
+        button {
+            padding: 8px 20px;
+            font-size: 25px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <fieldset>
+        <div class="form-row">
+            <label for="bilangan 1">Input Bilangan 1 </label>
+            <input type="text" id="bilangan1" name="bilangan      1">
+        </div>
+
+        <div class="form-row">
+            <label for="bilangan 2">Input Bilangan 2 </label>
+            <input type="text" id="bilangan2" name="bilangan 2">
+        </div>
+
+        <div class="form-row">
+            <div></div>
+            <div class="tombol">
+                <button onclick="hitung('+')">+</button>
+                <button onclick="hitung('-')">-</button>
+                <button onclick="hitung('*')">x</button>
+                <button onclick="hitung('/')">/</button>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label for="output">Output</label>
+            <input type="text" id="output" readonly>
+        </div>
+    </fieldset>
+
+    <script>
+        function hitung(operator) {
+            let bilangan1=Number(document.getElementById("bilangan1").value);
+            let bilangan2=Number(document.getElementById("bilangan2").value);
+
+            let hasil;
+            if (operator == '+') { 
+                hasil = bilangan1 + bilangan2; 
+            } else if (operator == '-') {
+                hasil = bilangan1 - bilangan2;
+            } else if (operator == '*') {
+                hasil = bilangan1 * bilangan2;
+            } else if (operator == '/') {
+                hasil = bilangan1 / bilangan2;
+            }       
+            document.getElementById("output").value = hasil;
+        }
+    </script>
+</body>
+</html>
