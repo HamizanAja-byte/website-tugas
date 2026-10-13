@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url("Huntiandi btth.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.kotak {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: rgba(0, 0, 0, 0.35);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    padding: 16px 28px;
+
+    color: white;
+    text-align: center;
+}
+
+.kotak h1 {
+    font-size: 1.6rem;
+    margin: 0 0 8px;
+}
+
+.kotak h3 {
+    font-size: 1rem;
+    margin: 12px 0 6px;
+}
+
+.kotak p {
+    margin: 0;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 1.5px solid rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    padding: 6px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
